@@ -2,7 +2,7 @@ import unittest
 from parentnode import *
 from leafnode import *
 
-class TestTextNode(unittest.TestCase):
+class TestParentNode(unittest.TestCase):
 
     def test_to_html_with_children(self):
         child_node = LeafNode("span", "child")
