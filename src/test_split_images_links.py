@@ -1,7 +1,7 @@
 import unittest
 from split_images_links import *
 
-class TestExtractMarkdownImagesLinks(unittest.TestCase):
+class TestSplitImagesLinks(unittest.TestCase):
     def test_split_images(self):
         node = TextNode(
             "This is text with an ![image](https://i.imgur.com/zjjcJKZ.png) and another ![second image](https://i.imgur.com/3elNhQu.png)",
@@ -127,8 +127,6 @@ class TestExtractMarkdownImagesLinks(unittest.TestCase):
             ],
             new_nodes,
         )
-
-    # --- El caso borde más importante: links vs imágenes ---
 
     def test_links_function_does_not_capture_images(self):
         # Sin el (?<!\!) en extract_markdown_links, esto fallaría:
